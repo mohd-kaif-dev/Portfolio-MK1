@@ -4,7 +4,7 @@ Welcome to my personal portfolio! 👋 I'm **Mohd Kaif**, a passionate web devel
 
 ## 🔗 Live Demo
 You can check out my portfolio **live here:**  
-👉 [Mohd Kaif Portfolio](https://yourportfolio.live)  
+👉 [Mohd Kaif Portfolio](https://mohdkaifdev.vercel.app)  
 
 ---
 
@@ -40,9 +40,9 @@ Here are the technologies I work with:
 ## 📬 Contact Me
 Looking to collaborate or have questions? Let's connect!  
 
-📧 Email: [mohdkaif@example.com](mailto:mohdkaif@example.com)  
-🐦 Twitter: [@mohdkaif_dev](https://twitter.com/mohdkaif_dev)  
-💼 LinkedIn: [Mohd Kaif](https://linkedin.com/in/mohdkaif)  
+📧 Email: [mk.kaif.dev@gmail.com](mailto:mk.kaif.dev@gmail.com)  
+🐦 Twitter: [@Kaicifer7](https://www.x.com/Kaicifer7)
+💼 LinkedIn: [Mohd Kaif](https://www.linkedin.com/in/mohd-kaif74) 
 
 ## ⭐ Contributions & Feedback
 If you find any **improvements** or **enhancements**, feel free to:  
