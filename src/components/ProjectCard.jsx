@@ -1,13 +1,17 @@
 import ExternalLink from "../assets/external_link.svg?react";
 
-import React from "react";
-
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, index }) => {
   return (
-    <div className="flex flex-col-reverse md:flex-row gap-8">
-      <div className="w-full md:w-1/2">
-        <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-        <p className="text-gray-300 mb-6">{project.description}</p>
+    <div
+      className={`flex flex-col-reverse ${
+        index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+      } gap-8`}
+    >
+      <div className="w-full lg:w-1/2">
+        <h3 className="text-xl md:text-2xl font-bold mb-4 ">{project.title}</h3>
+        <p className="text-gray-300 mb-6 text-sm md:text-base">
+          {project.description}
+        </p>
         <div>
           <strong className="block mb-3">Tech Stack:</strong>
           <div className="flex flex-wrap gap-2">
@@ -23,7 +27,7 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      <div className="w-full h-64 md:w-1/2 border-2 border-purple-400/50 rounded-3xl p-2">
+      <div className="w-full h-64 lg:w-1/2 border-2 border-purple-400/50 rounded-3xl p-2">
         <a
           href={project.link}
           target="_blank"

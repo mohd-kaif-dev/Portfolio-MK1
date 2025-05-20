@@ -3,18 +3,17 @@
 @tailwind utilities;
 
 :root {
-    font-family: 'Noto Sans', sans-serif;
-    background-color: rgb(24, 3,23);
-    color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  background-color: rgb(24, 3, 23);
+  color: #fff;
 }
 
 .bg-image {
-    background-image: url('./assets/noise.webp');  
+  background-image: url("./assets/noise.webp");
 }
 
 @layer components {
-    .project-card {
-      @apply absolute top-0 left-0 bottom-20 w-full h-full;
-    }
+  .project-card {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
 }
-  

@@ -22,7 +22,7 @@ const Projects1 = () => {
           stagger: 0.5, // Reduced stagger time
           scrollTrigger: {
             pin: wrapperRef.current,
-            start: () => (window.innerWidth < 768 ? "top 15%" : "top 32%"),
+            start: () => (window.innerWidth < 768 ? "top 15%" : "top 28%"),
             end: "+=800", // Define an end point
             scrub: 1, // Increased scrub value for smoother scrolling
           },
@@ -32,23 +32,23 @@ const Projects1 = () => {
     return () => ctx.revert();
   }, []);
   return (
-    <section id="projects" className="py-24 min-h-screen px-0 lg:px-32 ">
+    <section id="projects" className="py-24 min-h-screen px-0 lg:px-32  ">
       <div className="mx-auto px-4 max-w-5xl">
         <div
           ref={wrapperRef}
-          className="grid grid-cols-1  mt-12 relative w-full h-[650px] lg:h-[500px] p-16"
+          className="grid grid-cols-1  mt-12 relative w-full h-[630px] md:h-[750px] lg:h-[500px]"
         >
-          <h2 className="absolute -top-16 md:-top-20 left-1/2 -translate-x-1/2 text-2xl font-medium lg:text-4xl ">
+          <h2 className="absolute -top-16 md:-top-16 left-1/2 -translate-x-1/2 text-2xl font-medium lg:text-4xl ">
             Projects
           </h2>
           {PROJECTS.map((project, index) => (
             <div
               key={index}
-              className={`project-card border-2 border-purple-400/20 rounded-3xl p-8 backdrop-blur-xl ${
-                index % 2 == 0 ? "bg-[#1C102A]" : "bg-[#180317]"
+              className={`project-card border-2 border-purple-400/20 rounded-xl p-8 backdrop-blur-xl ${
+                index % 2 == 0 ? "bg-[#1C102A]/70" : "bg-[#180317]/70"
               }`}
             >
-              <ProjectCard project={project} />
+              <ProjectCard project={project} index={index} />
             </div>
           ))}
         </div>

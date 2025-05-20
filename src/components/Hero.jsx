@@ -1,12 +1,46 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { PROFILE } from "../constants";
-import { RiArrowRightUpLine } from "@remixicon/react";
+import {
+  RiArrowDownSLine,
+  RiArrowRightUpLine,
+  RiArrowUpSLine,
+} from "@remixicon/react";
 import heroImage from "../assets/Mohd-Kaif.webp";
 import { gsap } from "gsap";
 import TiltedCard from "./TiltedCard";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const heroRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const calculateScrollPercentage = () => {
+      let scrollProgress = document.getElementById("progress-bar");
+      let position = document.documentElement.scrollTop;
+      let calcHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollValue = Math.round((position * 100) / calcHeight);
+      setProgress(scrollValue);
+      scrollProgress.style.background = `conic-gradient(
+       
+       
+        #ff69b4 ${scrollValue}%, 
+      
+      
+     
+       
+        transparent ${scrollValue}%
+      )`;
+    };
+
+    document.addEventListener("scroll", calculateScrollPercentage);
+
+    return () => {
+      document.removeEventListener("scroll", calculateScrollPercentage);
+    };
+  }, [progress]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -69,13 +103,13 @@ const Hero = () => {
 
   return (
     <section
-      className="flex min-h-screen flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:gap-12 px-8 md:px-16"
+      className="flex min-h-screen flex-col lg:flex-row items-center justify-center lg:justify-between gap-2 lg:gap-12 px-8 md:px-16"
       ref={heroRef}
     >
       {/* <div className="absolute inset-0 z-50" id="wrapper-canvas"></div> */}
-      <div className="flex flex-col gap-2 justify-center items-center md:items-start">
-        <div className="mt-0 lg:mt-24 text-center md:text-left">
-          <h1 className="hero-title text-5xl uppercase lg:text-8xl font-extrabold">
+      <div className="flex flex-col gap-2 justify-center items-center lg:items-start">
+        <div className="mt-0 lg:mt-24 text-center lg:text-left">
+          <h1 className="hero-title text-5xl uppercase md:text-7xl lg:text-8xl font-extrabold">
             <span className="bg-gradient-to-b from-neutral-100 via-neutral-200 to-neutral-950 bg-clip-text text-transparent">
               {PROFILE.firstName}
             </span>{" "}
@@ -83,11 +117,11 @@ const Hero = () => {
               {PROFILE.lastName}
             </span>
           </h1>
-          <h2 className="hero-subheading bg-gradient-to-r from-pink-200 to-purple-700 bg-clip-text text-lg text-transparent lg:text-3xl font-bold">
+          <h2 className="hero-subheading bg-gradient-to-r from-pink-200 to-purple-700 bg-clip-text text-lg text-transparent md:text-3xl font-bold">
             {PROFILE.role}
           </h2>
         </div>
-        <p className="hero-text max-w-2xl text-sm tracking-tighter lg:text-xl font-medium bg-gradient-to-r from-neutral-200 to-neutral-400 bg-clip-text text-transparent text-center md:text-left">
+        <p className="hero-text max-w-2xl text-sm tracking-tighter md:text-xl font-medium bg-gradient-to-r from-neutral-200 to-neutral-400 bg-clip-text text-transparent text-center lg:text-left">
           {PROFILE.subheading}
         </p>
         <div className="hero-btn mt-2 md:mt-12">
@@ -129,6 +163,32 @@ const Hero = () => {
           overlayContent={<p className="tilted-card-demo-text">Mohd Kaif</p>}
         />
       </div>
+      <motion.div
+        initial={{ opacity: 0, x: 30, scale: 0.8 }}
+        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        id="progress-bar"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={`fixed bottom-14 md:bottom-20 lg:bottom-5 right-8 w-12 h-12 rounded-2xl flex items-center justify-center text-white z-50 shadow-md shadow-black cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out bg-transparent backdrop-blur-md ${
+          progress < 1 ? "hidden" : ""
+        }`}
+      >
+        {progress <= 99 ? (
+          <span
+            id="progress-value"
+            className="bg-black/90 backdrop-blur-lg border-1 border-purple-500/50 w-9 h-9 rounded-2xl flex items-center justify-center text-xs font-semibold flex-col group p-1"
+          >
+            {progress}%
+            <RiArrowDownSLine className="h-4 w-4 group-hover:hidden" />
+            <RiArrowUpSLine className="h-4 w-4 hidden group-hover:block" />
+          </span>
+        ) : (
+          <span className="flex flex-col items-center justify-center text-sm font-semibold tracking-tighter group">
+            <RiArrowUpSLine className="h-4 w-6 scale-100 group-hover:scale-150 transiton-all duration-300 ease-in-out" />
+            TOP
+          </span>
+        )}
+      </motion.div>
     </section>
   );
 };
