@@ -29,11 +29,11 @@ Here are the technologies I work with:
 ## 📷 Screenshots
 | Home Page | Projects Page |
 |-----------|--------------|
-| ![Home](public/screenshots/home.png) | ![Projects](public/screenshots/projects.png) |
+| ![Home](public/Screenshots/HomePage.png) | ![Projects](public/Screenshots/Projects.png) |
 
-| Contact Page | About Me Page |
+| Skills Page | Testimonials Page |
 |--------------|--------------|
-| ![Contact](public/screenshots/contact.png) | ![About](public/screenshots/about.png) |
+| ![Contact](public/Screenshots/Skills.png) | ![About](public/Screenshots/Testimonials.png) |
 
 ---
 
