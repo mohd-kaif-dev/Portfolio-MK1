@@ -24,13 +24,7 @@ const Hero = () => {
       let scrollValue = Math.round((position * 100) / calcHeight);
       setProgress(scrollValue);
       scrollProgress.style.background = `conic-gradient(
-       
-       
         #ff69b4 ${scrollValue}%, 
-      
-      
-     
-       
         transparent ${scrollValue}%
       )`;
     };
@@ -173,7 +167,7 @@ const Hero = () => {
           progress < 1 ? "hidden" : ""
         }`}
       >
-        {progress <= 99 ? (
+        {progress <= 98 ? (
           <span
             id="progress-value"
             className="bg-black/90 backdrop-blur-lg border-1 border-purple-500/50 w-9 h-9 rounded-2xl flex items-center justify-center text-xs font-semibold flex-col group p-1"

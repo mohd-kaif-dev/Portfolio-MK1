@@ -19,11 +19,10 @@ import {
   RiDatabase2Line,
   RiDatabase2Fill,
   RiGitMergeLine,
-} from "@remixicon/react";
-import {
   RiDatabaseLine,
   RiCodeSSlashLine,
   RiGitBranchLine,
+  RiContrastDrop2Fill,
 } from "@remixicon/react";
 
 export const NAVIGATION_LINKS = [
@@ -148,8 +147,8 @@ export const SKILLS = [
     icon: <RiCodeSSlashLine className="text-teal-400 w-10 h-10" />,
   },
   {
-    name: "GraphQL",
-    icon: <RiGitBranchLine className="text-pink-400 w-10 h-10" />,
+    name: "Liquid",
+    icon: <RiContrastDrop2Fill className="text-pink-400 w-10 h-10" />,
   },
   {
     name: "Redux",
@@ -170,6 +169,20 @@ export const SKILLS = [
 ];
 
 export const EXPERIENCES = [
+  {
+    yearRange: "2025 - Present",
+    role: "Shopify - Liquid Developer",
+    company: "Wolfattire",
+    description:
+      "Creating custom Shopify themes and e-commerce solutions for clients. Focusing on responsive layouts, modern UI implementations, and optimized web performance. Handling complete project lifecycles from requirement gathering to deployment.",
+    techStack: [
+      "Liquid",
+      "Shopify",
+      "Tailwind CSS",
+      "Shopify Themes",
+      "Node.js",
+    ],
+  },
   {
     yearRange: "2024 - Present",
     role: "Freelance Web Developer",
