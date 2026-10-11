@@ -5,7 +5,7 @@ import {
   RiArrowRightUpLine,
   RiArrowUpSLine,
 } from "@remixicon/react";
-import heroImage from "../assets/Mohd-Kaif.webp";
+import heroImage from "../assets/Mohd_Kaif.webp";
 import { gsap } from "gsap";
 import TiltedCard from "./TiltedCard";
 import { motion } from "framer-motion";
@@ -60,7 +60,7 @@ const Hero = () => {
             scale: 0.95,
             duration: 0.8,
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           ".hero-text",
@@ -69,7 +69,7 @@ const Hero = () => {
             y: 30,
             duration: 0.7,
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           ".hero-btn",
@@ -78,7 +78,7 @@ const Hero = () => {
             scale: 0.9,
             duration: 0.7,
           },
-          "-=0.3"
+          "-=0.3",
         )
         .from(
           ".hero-img",
@@ -88,7 +88,7 @@ const Hero = () => {
             scale: 0.9,
             duration: 0.8,
           },
-          "-=0.5"
+          "-=0.5",
         );
     }, heroRef);
 
@@ -145,9 +145,9 @@ const Hero = () => {
           imageSrc={heroImage}
           altText={PROFILE.name}
           captionText={"A Web Developer"}
-          containerHeight="300px"
+          containerHeight="400px"
           containerWidth="300px"
-          imageHeight="300px"
+          imageHeight="400px"
           imageWidth="300px"
           rotateAmplitude={12}
           scaleOnHover={1.2}

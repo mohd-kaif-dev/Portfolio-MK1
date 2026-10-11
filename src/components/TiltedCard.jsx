@@ -11,9 +11,9 @@ export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
   captionText = "",
-  containerHeight = "300px",
+  containerHeight = "400px",
   containerWidth = "100%",
-  imageHeight = "300px",
+  imageHeight = "400px",
   imageWidth = "300px",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
@@ -57,11 +57,11 @@ export default function TiltedCard({
     // Limit rotation to prevent flipping
     const rotationX = Math.max(
       -30,
-      Math.min(30, (offsetY / (rect.height / 2)) * -rotateAmplitude)
+      Math.min(30, (offsetY / (rect.height / 2)) * -rotateAmplitude),
     );
     const rotationY = Math.max(
       -30,
-      Math.min(30, (offsetX / (rect.width / 2)) * rotateAmplitude)
+      Math.min(30, (offsetX / (rect.width / 2)) * rotateAmplitude),
     );
 
     rotateX.set(rotationX);

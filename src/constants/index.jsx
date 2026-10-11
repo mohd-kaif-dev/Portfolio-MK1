@@ -5,8 +5,8 @@ import project4 from "../assets/ProjectImage4.webp";
 // import project5 from "../assets/project5.webp";
 import project6 from "../assets/ProjectImage6.webp";
 
-import Rajesh_Kumar from "../assets/Rajesh_Kumar.webp";
-import Priya_Sharma from "../assets/Priya_Sharma.webp";
+import Kushal_Dongre from "../assets/Kushal_Dongre.webp";
+import Aditya_Mahadik from "../assets/Aditya_Mahadik.webp";
 import Amit_Patel from "../assets/Amit_Patel.webp";
 
 import {
@@ -84,18 +84,18 @@ export const PROJECTS = [
   },
   {
     id: 4,
-    title: "Pixelta.ai",
+    title: "Bharat Bhoomi",
     description:
-      "Pixelta is an AI-based image processing website that offers features such as background removal, smart crop, AI enhancement, and many more.",
+      "A reporter Manager and News Management System for Bharat Bhoomi. It allows reporters to submit news articles, manage their profiles, and track the status of their submissions.",
     techStack: [
       "React",
-      "TypeScript",
+      "Javascript",
       "HuggingFace",
       "Supabase",
       "Tailwind CSS",
     ],
     imgSrc: project4,
-    link: "https://pixelta-ai.lovable.app/",
+    link: "https://bharat-bhoomi-1.vercel.app/v1",
   },
   // {
   //   id: 5,
@@ -170,12 +170,13 @@ export const SKILLS = [
 
 export const EXPERIENCES = [
   {
-    yearRange: "2025 - Present",
-    role: "Shopify - Liquid Developer",
+    yearRange: "2025 ",
+    role: "Full Stack Developer (Shopify + MERN)",
     company: "Wolfattire",
     description:
       "Creating custom Shopify themes and e-commerce solutions for clients. Focusing on responsive layouts, modern UI implementations, and optimized web performance. Handling complete project lifecycles from requirement gathering to deployment.",
     techStack: [
+      "MERN Stack",
       "Liquid",
       "Shopify",
       "Tailwind CSS",
@@ -206,28 +207,6 @@ export const EXPERIENCES = [
     ],
   },
   {
-    yearRange: "2023",
-    role: "Meta Frontend Developer Certificate",
-    company: "Meta",
-    description:
-      "Completed Meta's professional certification program focused on modern frontend development. Built practical projects including a restaurant booking system and social media dashboard. Learned industry best practices and modern development workflows.",
-    techStack: [
-      "React.js",
-      "JavaScript",
-      "Git",
-      "Tailwind CSS",
-      "Responsive Design",
-    ],
-  },
-  {
-    yearRange: "2023",
-    role: "Python Training Intern",
-    company: "Tevatron Pvt. Ltd.",
-    description:
-      "Gained hands-on experience in Python development through remote internship. Assisted in developing and maintaining web applications using modern technologies. Collaborated with senior developers to implement new features and fix bugs.",
-    techStack: ["Python", "Django", "MySQL", "JavaScript", "CSS3"],
-  },
-  {
     yearRange: "2022 - 2023",
     role: "Freelance WordPress Developer",
     company: "Self-Employed",
@@ -240,14 +219,6 @@ export const EXPERIENCES = [
 export const EDUCATION = [
   {
     id: 1,
-    degree: "Master of Computer Application",
-    institution: "Jamia Hamdard University",
-    duration: "2024 - Present",
-    description:
-      "Currently pursuing MCA with focus on software development, data structures, and cloud computing. Learning modern development practices and working on projects involving web technologies and distributed systems.",
-  },
-  {
-    id: 2,
     degree: "Bachelor of Science in Computer Science",
     institution: "Ewing Christian College",
     duration: "2018 - 2021",
@@ -258,18 +229,18 @@ export const EDUCATION = [
 
 export const TESTIMONIALS = [
   {
-    name: "Rajesh Kumar",
-    title: "CTO, Tevatron Pvt. Ltd.",
+    name: "Kushal Dongre",
+    title: "CEO Wolfattire",
     quote:
-      "Kaif demonstrated exceptional skills during his internship with us. His ability to quickly grasp new technologies and contribute meaningfully to our projects was impressive. His work on our Restraunt Management System showed great attention to detail and a solid understanding of Python development.",
-    image: Rajesh_Kumar,
+      "During his internship, Kaif proved to be a highly capable and proactive team member. He adapted quickly to new technologies and consistently delivered valuable contributions across multiple projects. His work on our Shopify storefront showcased both his meticulous approach and strong understanding of Liquid Templating Language. Furthermore, while working on our EMS platform, he demonstrated excellent MERN stack development skills, contributing effectively to both the frontend and backend aspects of the project.",
+    image: Kushal_Dongre,
   },
   {
-    name: "Priya Sharma",
-    title: "Project Lead, Tevatron Pvt. Ltd.",
+    name: "Aditya Mahadike",
+    title: "Software Tester",
     quote:
       "Working with Kaif was a pleasure. He brought fresh perspectives to our team and showed great initiative in solving complex problems. His collaborative nature and strong technical skills made him a valuable team member during his internship.",
-    image: Priya_Sharma,
+    image: Aditya_Mahadik,
   },
   {
     name: "Amit Patel",
